@@ -1,0 +1,136 @@
+body {
+  margin: 0;
+  font-family: Georgia, serif;
+  background-color: #ffd6e5; /* soft pink */
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.intro {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+}
+
+/* ── Active clue banner ── */
+#active-clue {
+  min-height: 1.6em;
+  font-size: 1em;
+  color: #d66a8c;
+  font-style: italic;
+  margin-bottom: 8px;
+}
+
+/* ── Side-by-side layout ── */
+.puzzle-area {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 28px;
+  margin-top: -4px;
+}
+
+.crossword {
+  display: grid;
+  gap: 6px;
+  justify-content: center;
+  margin: 30px ; /* edwiedwied */
+}
+
+.cell {
+  position: relative;
+  width: 32px;
+  height: 32px;
+}
+
+
+.cell input {
+  width: 95%;
+  height: 95%;
+  margin: -1px;
+  text-align: center;
+  font-size: 1em;
+  border: 1.5px solid #eaa0b8;
+  background: #fff;
+  box-shadow: none;
+}
+
+
+
+.cell input:focus {
+  outline: none;
+  border-color: #d66a8c;
+  background: linear-gradient(135deg, #ffd6e5, #ffb6cf);
+}
+
+.number {
+  position: absolute;
+  top: 2px;
+  left: 3px;
+  font-size: 0.55em;
+  color: #d66a8c;
+  pointer-events: none;
+  line-height: 1;
+  z-index: 1;
+}
+
+.cell.black {
+  background: #eaa0b8;
+}
+
+.clues {
+    /*text-align: left; wefwnefnjfnwefwnejnsd*/
+    width: 300px;
+  margin-top: 30px;
+  background: rgba(255, 255, 255, 0.55);
+  border-radius: 16px;
+  padding: 18px 16px;
+  max-height: 620px;
+  overflow-y: auto;
+  box-shadow: 0 4px 18px rgba(214, 106, 140, 0.1);
+}
+
+.clues h2 {
+  font-size: 1.1em;
+  color: #d66a8c;
+  margin: 0 0 14px;
+  text-align: center;
+  letter-spacing: 0.04em;
+}
+
+.clues p {
+  font-size: 0.82em;
+  line-height: 1.55;
+  margin: 4px 0;
+  padding: 3px 5px;
+  border-radius: 6px;
+  color: #555;
+}
+
+.clues p strong {
+  font-size: 0.78em;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #c25a7c;
+  display: block;
+  margin: 10px 0 4px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #eaa0b8;
+}
+
+.ending {
+  margin-top: 40px;
+  font-size: 1.2em;
+}
+
+

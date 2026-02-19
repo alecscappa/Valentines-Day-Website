@@ -5,7 +5,7 @@ const puzzle = {
   rows: 19,
   cols: 18,
 
-  grid: [
+  /*grid: [
     [null,null,null,null,null,null,'L',null,null,null,null,null,null,null,null,null,null,null],
     [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
     [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
@@ -25,8 +25,8 @@ const puzzle = {
     [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
     [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
     [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
-  ],
-  /*grid: [
+  ],*/
+  grid: [
     [null,null,null,null,null,null,'S',null,null,null,null,null,null,null,null,null,null,null],
     [null,null,null,null,null,null,'T',null,null,null,null,null,null,null,null,null,null,null],
     [null,null,null,null,null,null,'E',null,null,null,null,null,null,null,null,null,null,null],
@@ -46,7 +46,7 @@ const puzzle = {
     [null,null,null,'Y',null,null,null,null,'C',null,null,null,null,null,null,null,null,'N'],
     [null,null,null,'A',null,null,null,'D','E','A','D','P','O','O','L',null,null,'E'],
     [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,'S'],
-  ],*/
+  ],
   clues: {
     down: [
       "1. My Favourite Dinosaur (11)",

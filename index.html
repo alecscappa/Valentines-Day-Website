@@ -9,7 +9,7 @@
 
   <div class="container">
     <h1>Happy Valentine's Day 🩷</h1>
-    <p class="intro">I love you Lara, to the end of the crossworld and back</p>
+    <p class="intro">I love you Lara, to the end of the crossworld and bac</p>
     <div id="active-clue"></div>
 
     <div class="puzzle-area">
@@ -21,16 +21,25 @@
       </div>
     </div>
 
-    <div id="surprise" style="display:none; margin-top:30px;">
-  <iframe 
-    src="https://drive.google.com/file/d/10s3qgebxb0OH9cwA_y3WceCn3nCXIxvv/view?usp=sharing" 
-    width="600" height="400" allow="autoplay" allowfullscreen>
-  </iframe>
-</div>
+    <div id="surprise"></div>
 
     <p class="ending">Thank you for your infinite love</p>
   </div>
 
+<!-- Heart button -->
+<button id="loveBtn">💜</button>
+
+<!-- Video overlay -->
+<div id="videoOverlay">
+  <iframe 
+      id="valentineVideo" 
+      src="https://drive.google.com/file/d/10s3qgebxb0OH9cwA_y3WceCn3nCXIxvv/preview" 
+      allow="autoplay" allowfullscreen>
+  </iframe>
+  <button id="closeVideo">✖</button>
+</div>
+
   <script src="script.js"></script>
+
 </body>
 </html>

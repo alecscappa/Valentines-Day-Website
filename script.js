@@ -1,8 +1,32 @@
+// ─── Get overlay elements first ───────────────────────────────────────────────
+
 // ─── Puzzle data ────────────────────────────────────────────────────────────
 const puzzle = {
   rows: 19,
   cols: 18,
+
   grid: [
+    [null,null,null,null,null,null,'L',null,null,null,null,null,null,null,null,null,null,null],
+    [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
+    [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
+    [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
+    [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
+    [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
+    [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
+    [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
+    [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
+    [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
+    [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
+    [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
+    [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
+    [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
+    [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
+    [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
+    [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
+    [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
+    [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
+  ],
+  /*grid: [
     [null,null,null,null,null,null,'S',null,null,null,null,null,null,null,null,null,null,null],
     [null,null,null,null,null,null,'T',null,null,null,null,null,null,null,null,null,null,null],
     [null,null,null,null,null,null,'E',null,null,null,null,null,null,null,null,null,null,null],
@@ -22,7 +46,7 @@ const puzzle = {
     [null,null,null,'Y',null,null,null,null,'C',null,null,null,null,null,null,null,null,'N'],
     [null,null,null,'A',null,null,null,'D','E','A','D','P','O','O','L',null,null,'E'],
     [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,'S'],
-  ],
+  ],*/
   clues: {
     down: [
       "1. My Favourite Dinosaur (11)",
@@ -279,10 +303,7 @@ function checkSolved() {
 
 function onPuzzleSolved() {
   document.body.style.background = "linear-gradient(135deg, #ffd6e5, #ff9ec4)";
-  const surprise = document.getElementById("surprise");
-  if (surprise) surprise.style.display = "block";
-  const video = document.getElementById("valentineVideo");
-  if (video) video.play();
+  document.getElementById("videoOverlay").classList.add("show");
 }
 
 // ─── Clue list ────────────────────────────────────────────────────────────────
@@ -312,3 +333,14 @@ document.head.appendChild(style);
 // ─── Start ────────────────────────────────────────────────────────────────────
 const first = ACROSS_WORDS[0].cells[0];
 inputs[first.r][first.c].focus();
+
+// ─── Button listeners ─────────────────────────────────────────────────────────
+const videoOverlay = document.getElementById("videoOverlay");
+
+document.getElementById("loveBtn").addEventListener("click", () => {
+  onPuzzleSolved();
+});
+
+document.getElementById("closeVideo").addEventListener("click", () => {
+  videoOverlay.classList.remove("show");
+});
